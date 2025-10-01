@@ -1,0 +1,334 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff;
+    color: #248fc1; /* Soft gray-blue text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    flex-direction: column;
+}
+
+h1, h2 {
+    color: #0288d1; /* Muted blue for headings */
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #03a9f4; /* Soft vibrant blue */
+    color: white;
+    border: none;
+    border-radius: 8px; /* Softer edges */
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+button:hover {
+    background-color: #0288d1; /* Slightly darker blue on hover */
+    transform: translateY(-2px); /* Subtle lift effect */
+}
+
+.hidden {
+    display: none;
+}
+
+#quiz-screen,
+#closing-screen, #intro-screen {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #ffffff; /* White card-like container */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+#answers-container button {
+    background-color: #4fc3f7; /* Light blue for answer buttons */
+    margin: 10px 0;
+    padding: 15px;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #0288d1;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#answers-container button:hover {
+    background-color: #0288d1; /* Match hover effect */
+    transform: scale(1.02); /* Slight enlargement */
+}
+
+#question-text {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #37474f; /* Softer gray for text */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    #question-text {
+        font-size: 20px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+
+    #answers-container button {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    #question-text {
+        font-size: 18px;
+    }
+
+    #answers-container button {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 12px;
+    }
+}
+
+
+
+  /* ===========================
+   General Styles
+=========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+   /* Navbar container */
+   .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #00468B; /* Deep professional color */
+    padding: 1em 2em;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Logo */
+  .navbar .logo {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    line-height: 1; /* Tighter line spacing */
+    text-align: center; /* Center the text */
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .navbar .logo .highlight {
+    font-weight: 700; /* Bold for emphasis */
+    color: #467be5; /* Accent color */
+  }
+  
+  /* Logo */
+  .navbar .logo {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    line-height: 1.1; /* Tighter spacing */
+    text-align: left; /* Align left for consistent alignment */
+    display: inline-block; /* Ensure it's treated as a block of text */
+    transition: color 0.3s ease-in-out;
+  }
+  
+  /* Apply consistent widths for alignment */
+  .navbar .logo .text {
+    display: block; /* Forces each word to stack vertically */
+    width: fit-content; /* Ensures proper alignment */
+    margin: 0 auto; /* Center-aligns the text block */
+  }
+  
+  .navbar .logo .highlight {
+    font-weight: 700; /* Bold for emphasis */
+    color: #9fddff; /* Accent color */
+  }
+  
+  
+  /* Hover Effect for Entire Logo */
+  .navbar .logo:hover {
+    color: #4f46e5; /* Change color of "Educational" */
+  }
+  
+  .navbar .logo .highlight:hover {
+    color: #3958f5; /* Slightly change color of "Hub" on hover */
+  }
+  
+  
+  .navbar .logo:hover {
+    color: #ffffff; /* Subtle hover effect */
+  }
+  
+  /* Navigation links */
+  .navbar .nav-links {
+    display: flex;
+    gap: 1.5em;
+  }
+  
+  .navbar .nav-links a {
+    text-decoration: none;
+    color: #f1f5f9;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.5em 1em;
+    border-radius: 6px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .navbar .nav-links a:hover {
+    background-color: #46ade5;
+    color: #ffffff;
+  }
+  
+  /* Hamburger menu */
+  .navbar .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 1.5em;
+    cursor: pointer;
+  }
+  
+  .navbar .hamburger span {
+    background-color: white;
+    height: 3px;
+    width: 28px;
+    border-radius: 2px;
+    transition: transform 0.3s, background-color 0.3s;
+  }
+  
+  /* Hamburger animation effect */
+  .navbar .hamburger:hover span {
+    background-color: #46ade5;
+  }
+  
+  /* Mobile-first design */
+  @media screen and (max-width: 768px) {
+    .navbar .nav-links {
+      display: none;
+      flex-direction: column;
+      background-color: #1e293b;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 100%;
+      padding: 1em 0;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      border-top: 1px solid #334155;
+      transform: translateY(-10%);
+      opacity: 0;
+      transition: all 0.3s ease-in-out;
+    }
+  
+    .navbar .nav-links.active {
+      display: flex;
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  
+    .navbar .nav-links a {
+      padding: 1em;
+      font-size: 1.1rem;
+      text-align: center;
+      border-bottom: 1px solid #334155;
+    }
+  
+    .navbar .nav-links a:last-child {
+      border-bottom: none;
+    }
+  
+    .navbar .hamburger {
+      display: flex;
+    }
+  }
+  
+  /* Tablet-specific styles */
+  @media screen and (max-width: 1024px) {
+    .navbar {
+      padding: 1em 1.5em;
+    }
+  
+    .navbar .nav-links a {
+      font-size: 0.95rem;
+    }
+  
+    .navbar .logo {
+      font-size: 1.6rem;
+    }
+  }
+  
+  /* Subtle sticky effect when scrolling */
+  body.scrolled .navbar {
+    background-color: #0f172a;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  
+  /* ===========================
+     Responsive Design
+  =========================== */
+  
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+    }
+  
+    .logo {
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+  
+    nav ul li a {
+      font-size: 1.2rem; /* Slightly larger for touch-friendly interaction */
+      padding: 0.5rem 1rem;
+      display: block; /* Ensures the clickable area spans the entire link */
+      text-align: center;
+    }
+  }
+  
+  
+  
+  

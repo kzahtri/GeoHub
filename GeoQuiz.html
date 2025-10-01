@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geo-Quiz</title>
+    <link rel="stylesheet" href="quiz-styles.css">
+</head>
+<body>
+        <nav class="navbar">
+          <div class="logo">
+            Geo<br>
+            <span class="highlight">Hub.</span>
+          </div>    
+          <div class="nav-links">
+            <a href="capstone02.html">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#blog">Geo-Bot</a>
+            <a href="#contact">Contact</a>
+          </div>
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </nav>
+        <script>
+          const hamburger = document.querySelector('.hamburger');
+          const navLinks = document.querySelector('.nav-links');
+      
+          hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+          });
+        </script>
+      
+      <br><br> 
+    <!-- Intro Screen -->
+    <div id="intro-screen">
+        <h1>Welcome to the Geo-Quiz!</h1>
+        <p>Answer these 10 questions to see how much you've learned!</p>
+        <button id="start-btn">Start Quiz</button>
+    </div>
+
+    <!-- Quiz Screen -->
+    <div id="quiz-screen" class="hidden">
+        <h2 id="question-text"></h2>
+        <div id="answers-container"></div>
+    </div>
+
+    <!-- Closing Screen -->
+    <div id="closing-screen" class="hidden">
+        <h1>Quiz Completed!</h1>
+        <p>Your Score: <span id="final-score"></span>/10</p>
+        <button id="restart-quiz">Restart Quiz</button>
+    </div>
+
+    <script src="quiz-script.js"></script>
+</body>
+</html>

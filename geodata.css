@@ -1,0 +1,448 @@
+
+  /* Container */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  
+  /* Section Titles */
+  h2 {
+    color: #003366;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Table Styles */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .data-table th,
+  .data-table td {
+    text-align: left;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+  }
+  
+  .data-table th {
+    background-color: #003366;
+    color: white;
+  }
+  
+  .data-table tr:nth-child(even) {
+    background-color: #f7faff;
+  }
+  
+  
+
+  /* Map Container */
+#map {
+    width: 100%;
+    height: 500px; /* Adjust height as needed */
+    margin-top: 1rem;
+    border: 2px solid #003366;
+    border-radius: 5px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    #map {
+      height: 300px; /* Adjust for smaller screens */
+    }
+  }
+  
+  
+  /* ===========================
+   Footer
+=========================== */
+footer {
+  background-color: #00468B; /* Dark background for a professional, sleek look */
+  color: #f8f9fa; /* Light text for contrast */
+  padding: 3rem 0; /* More space for a more spacious feel */
+  text-align: center; /* Center the footer content */
+}
+
+footer .logo a {
+  display: inline-block; /* Ensures the anchor tag behaves like an inline element */
+  transition: transform 0.3s ease; /* Adds a smooth transform effect when hovered */
+}
+
+footer .logo a:hover {
+  transform: scale(1.1); /* Slightly enlarges the logo on hover */
+}
+
+footer .logo img {
+  max-width: 120px; /* Adjust size if needed */
+  margin-bottom: 1rem; /* Space between the logo and text */
+}
+
+
+footer nav ul {
+  list-style: none; /* Remove default list bullets */
+  padding: 0; /* Remove default padding */
+  margin: 1rem 0; /* Adds spacing between logo and links */
+  display: flex; /* Use Flexbox for horizontal alignment */
+  justify-content: center; /* Centers the list items horizontally */
+  gap: 20px; /* Space between the items */
+}
+
+footer nav ul li {
+  padding: 0 15px; /* Adds padding for balance between items */
+}
+
+footer nav ul li a {
+  text-decoration: none; /* Remove underline from links */
+  color: #f8f9fa; /* Light text color for links */
+  font-size: 1rem; /* Standard link size */
+  font-weight: 500; /* Slightly bolder links for a clean, professional look */
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+}
+
+footer nav ul li a:hover {
+  color: #007bff; /* Highlight the link with a blue color on hover */
+  transform: translateY(-2px); /* Subtle lift on hover */
+}
+
+footer .copyright {
+  font-size: 0.875rem; /* Smaller font for copyright text */
+  color: #adb5bd; /* Light gray for less emphasis */
+  margin-top: 2rem; /* Adds space above copyright text */
+  font-weight: 300; /* Lighter weight for a sleek appearance */
+}
+
+@media (max-width: 768px) {
+  footer nav ul {
+      flex-direction: column; /* Stack the nav items vertically on smaller screens */
+      gap: 10px; /* Reduce space between items */
+  }
+}
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    header h1 {
+      font-size: 1.5rem;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    .data-table th, .data-table td {
+      font-size: 0.9rem;
+    }
+  }
+  
+
+
+  /* ===========================
+   General Styles
+=========================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #ffffff;
+  color: #11004d;
+}
+ /* Navbar container */
+ .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #00468B; /* Deep professional color */
+  padding: 1em 2em;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Logo */
+.navbar .logo {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  line-height: 1; /* Tighter line spacing */
+  text-align: center; /* Center the text */
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar .logo .highlight {
+  font-weight: 700; /* Bold for emphasis */
+  color: #467be5; /* Accent color */
+}
+
+/* Logo */
+.navbar .logo {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  line-height: 1.1; /* Tighter spacing */
+  text-align: left; /* Align left for consistent alignment */
+  display: inline-block; /* Ensure it's treated as a block of text */
+  transition: color 0.3s ease-in-out;
+}
+
+/* Apply consistent widths for alignment */
+.navbar .logo .text {
+  display: block; /* Forces each word to stack vertically */
+  width: fit-content; /* Ensures proper alignment */
+  margin: 0 auto; /* Center-aligns the text block */
+}
+
+.navbar .logo .highlight {
+  font-weight: 700; /* Bold for emphasis */
+  color: #9fddff; /* Accent color */
+}
+
+
+/* Hover Effect for Entire Logo */
+.navbar .logo:hover {
+  color: #4f46e5; /* Change color of "Educational" */
+}
+
+.navbar .logo .highlight:hover {
+  color: #3958f5; /* Slightly change color of "Hub" on hover */
+}
+
+
+.navbar .logo:hover {
+  color: #ffffff; /* Subtle hover effect */
+}
+
+/* Navigation links */
+.navbar .nav-links {
+  display: flex;
+  gap: 1.5em;
+}
+
+.navbar .nav-links a {
+  text-decoration: none;
+  color: #f1f5f9;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5em 1em;
+  border-radius: 6px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar .nav-links a:hover {
+  background-color: #46ade5;
+  color: #ffffff;
+}
+
+/* Hamburger menu */
+.navbar .hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 1.5em;
+  cursor: pointer;
+}
+
+.navbar .hamburger span {
+  background-color: white;
+  height: 3px;
+  width: 28px;
+  border-radius: 2px;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+/* Hamburger animation effect */
+.navbar .hamburger:hover span {
+  background-color: #46ade5;
+}
+
+/* Mobile-first design */
+@media screen and (max-width: 768px) {
+  .navbar .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #1e293b;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    padding: 1em 0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-top: 1px solid #334155;
+    transform: translateY(-10%);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .navbar .nav-links.active {
+    display: flex;
+    transform: translateY(0%);
+    opacity: 1;
+  }
+
+  .navbar .nav-links a {
+    padding: 1em;
+    font-size: 1.1rem;
+    text-align: center;
+    border-bottom: 1px solid #334155;
+  }
+
+  .navbar .nav-links a:last-child {
+    border-bottom: none;
+  }
+
+  .navbar .hamburger {
+    display: flex;
+  }
+}
+
+/* Tablet-specific styles */
+@media screen and (max-width: 1024px) {
+  .navbar {
+    padding: 1em 1.5em;
+  }
+
+  .navbar .nav-links a {
+    font-size: 0.95rem;
+  }
+
+  .navbar .logo {
+    font-size: 1.6rem;
+  }
+}
+
+/* Subtle sticky effect when scrolling */
+body.scrolled .navbar {
+  background-color: #0f172a;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ===========================
+   Responsive Design
+=========================== */
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .logo {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  nav ul li a {
+    font-size: 1.2rem; /* Slightly larger for touch-friendly interaction */
+    padding: 0.5rem 1rem;
+    display: block; /* Ensures the clickable area spans the entire link */
+    text-align: center;
+  }
+}
+
+
+
+/* ===========================
+   Footer
+=========================== */
+footer {
+  background-color: #00468B; /* Dark background for a professional, sleek look */
+  color: #f8f9fa; /* Light text for contrast */
+  padding: 3rem 0; /* More space for a more spacious feel */
+  text-align: center; /* Center the footer content */
+}
+
+footer .logo a {
+  display: inline-block; /* Ensures the anchor tag behaves like an inline element */
+  transition: transform 0.3s ease; /* Adds a smooth transform effect when hovered */
+}
+
+footer .logo a:hover {
+  transform: scale(1.1); /* Slightly enlarges the logo on hover */
+}
+
+footer .logo img {
+  max-width: 120px; /* Adjust size if needed */
+  margin-bottom: 1rem; /* Space between the logo and text */
+}
+
+
+footer nav ul {
+  list-style: none; /* Remove default list bullets */
+  padding: 0; /* Remove default padding */
+  margin: 1rem 0; /* Adds spacing between logo and links */
+  display: flex; /* Use Flexbox for horizontal alignment */
+  justify-content: center; /* Centers the list items horizontally */
+  gap: 20px; /* Space between the items */
+}
+
+footer nav ul li {
+  padding: 0 15px; /* Adds padding for balance between items */
+}
+
+footer nav ul li a {
+  text-decoration: none; /* Remove underline from links */
+  color: #f8f9fa; /* Light text color for links */
+  font-size: 1rem; /* Standard link size */
+  font-weight: 500; /* Slightly bolder links for a clean, professional look */
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+}
+
+footer nav ul li a:hover {
+  color: #007bff; /* Highlight the link with a blue color on hover */
+  transform: translateY(-2px); /* Subtle lift on hover */
+}
+
+footer .copyright {
+  font-size: 0.875rem; /* Smaller font for copyright text */
+  color: #adb5bd; /* Light gray for less emphasis */
+  margin-top: 2rem; /* Adds space above copyright text */
+  font-weight: 300; /* Lighter weight for a sleek appearance */
+}
+
+@media (max-width: 768px) {
+  footer nav ul {
+      flex-direction: column; /* Stack the nav items vertically on smaller screens */
+      gap: 10px; /* Reduce space between items */
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-parallax h2 {
+    font-size: 2.5rem;
+  }
+  .hero-parallax p {
+    font-size: 1rem;
+  }
+  #earthquake-science h2 {
+    font-size: 2rem;
+  }
+  .parallax-content {
+    padding: 20px;
+  }
+  .card {
+    width: 100%;
+  }
+}

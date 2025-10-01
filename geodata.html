@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Earthquake and Tsunami Data</title>
+  <link rel="stylesheet" href="geodata.css">
+</head>
+
+
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      Geo<br>
+      <span class="highlight">Hub.</span>
+    </div>    
+    <div class="nav-links">
+      <a href="capstone02.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="https://huggingface.co/spaces/kzahtri/Geo-Hub" target="_blank" rel="noopener noreferrer">Geo-Bot</a>
+        <a href="https://kzahtri.itch.io/geoquiz" target="_blank" rel="noopener noreferrer">Geo-Quiz</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+
+<br><br><br><br>  
+<main class="container">
+    <section class="data-section">
+      <h2>Global Live Earthquake Data</h2>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Date & Time</th>
+            <th>Location</th>
+            <th>Magnitude</th>
+            <th>Depth (km)</th>
+          </tr>
+        </thead>
+        <tbody id="earthquake-data">
+          <tr>
+            <td>Loading...</td>
+            <td>Loading...</td>
+            <td>Loading...</td>
+            <td>Loading...</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="map-section">
+        <h2>Interactive Earthquake Map</h2>
+        <div id="map"></div>
+      </section>
+      </main>
+
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+
+ 
+<footer>
+  <div class="logo">
+    <a href="https://kzahtri.github.io/Kaisyah/kaz.html">
+      <img src="images/logo.png" alt="Earthquake Icon">
+    </a>   
+      <p>Earthquake & Tsunami Educational Hub</p>
+  </div>
+  <nav>
+      <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+      </ul>
+  </nav>
+  <div class="copyright">
+      &copy; 2025 Earthquake & Tsunami Educational Hub. All rights reserved.
+  </div>
+</footer>
+
+
+ 
+  <!-- Scripts -->
+ <script src="geodata.js"></script>
+</body>
+</html>

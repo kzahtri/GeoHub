@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn about Earthquakes and Tsunamis - Educational Hub">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles00.css">
+  <title>Earthquake Education Hub</title>
+  
+
+
+<style>/* The class added when the card enters the viewport */
+    .card.visible {
+      opacity: 1;
+      transform: translateY(0); /* Cards rise into their position */
+    }
+
+    .card h2 {
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+
+    .card ul {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+    </style>
+
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      Geo<br>
+      <span class="highlight">Hub.</span>
+    </div>    
+    <div class="nav-links">
+      <a href="capstone02.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="https://huggingface.co/spaces/kzahtri/Geo-Hub" target="_blank" rel="noopener noreferrer">Geo-Bot</a>
+      <a href="https://kzahtri.itch.io/geoquiz" target="_blank" rel="noopener noreferrer">Geo-Quiz</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+  
+<!-- Hero Section with Parallax -->
+<section class="parallax hero-parallax">
+  <div class="parallax-content hero-parallax-content">
+    <h2>Earthquake Awareness</h2>
+    <p>Understand the science of earthquakes and how to stay prepared for this natural disaster.</p>
+  </div>
+</section>
+
+<!-- Content Section -->
+<section class="section py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center">Understanding Earthquakes</h2>
+  </div>
+</section>
+
+
+<!-- Parallax Science Section -->
+<section id="earthquake-science" class="earthquake-science-parallax">
+  <div class="parallax-content earthquake-science-content">
+    <h2>The Science Behind Earthquakes: Tectonic Plates in Motion</h2>
+    <p>
+      Earthquakes are caused by the movement of tectonic plates beneath the Earth's surface. These plates, which are large pieces of the Earth's crust, are constantly shifting. When they collide, pull apart, or slide past each other, the energy released creates seismic waves that we feel as an earthquake.
+    </p>
+    <ul>
+      <li><strong>Divergent Boundaries:</strong> Plates pulling apart can cause rifts, earthquakes, and volcanic eruptions.</li>
+      <li><strong>Convergent Boundaries:</strong> When plates collide, they can create massive earthquakes and volcanic activity.</li>
+      <li><strong>Transform Boundaries:</strong> Plates sliding past each other generate friction that leads to earthquakes along fault lines.</li>
+    </ul>
+    <p>
+      These movements happen over long periods of time but can be sudden and unpredictable. Understanding tectonic plate movements helps us grasp why some regions are more prone to earthquakes than others.
+    </p>
+  </div>
+</section>
+
+
+<section class="earthquake-preparedness-section py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center">Measuring Earthquakes</h2>
+  </div>
+</section>
+
+
+<section class="earthquake-parallax">
+  <div class="earthquake-parallax-content">
+    <div class="earthquake-info">
+      <div class="earthquake-magnitude">
+        <h3>1. Magnitude</h3>
+        <p>Measured using the Richter Scale or Moment Magnitude Scale (Mw), it represents the energy released during an earthquake.</p>
+        <ul>
+          <li><strong>Small (below 4.0):</strong> Often not felt.</li>
+          <li><strong>Moderate (4.0–6.0):</strong> Noticeable shaking, some damage.</li>
+          <li><strong>Strong (6.1–7.9):</strong> Significant damage over wide areas.</li>
+          <li><strong>Major (8.0+):</strong> Catastrophic destruction.</li>
+        </ul>
+      </div>
+      <div class="earthquake-intensity">
+        <h3>2. Intensity</h3>
+        <p>Describes the earthquake's effects on people, buildings, and the natural environment, measured by the Modified Mercalli Intensity (MMI) scale.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="earthquake-preparedness-section py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center">Earthquake Preparedness</h2>
+  </div>
+</section>
+
+<div class="center-wrapper">
+  <section class="card-container">
+    <!-- Before an Earthquake Card -->
+    <div class="card">
+      <h2>Before an Earthquake: Be Prepared</h2>
+      <ul>
+        <li><strong>Secure Your Surroundings:</strong> Anchor furniture, appliances, and large items to prevent them from tipping over during the quake.</li>
+        <li><strong>Prepare an Emergency Kit:</strong> Ensure your kit includes essentials such as water, non-perishable food, flashlight, batteries, and a first-aid kit.</li>
+        <li><strong>Plan and Practice:</strong> Identify safe spots in your home, such as under sturdy furniture or near interior walls, and rehearse earthquake drills with your family to ensure everyone knows what to do.</li>
+      </ul>
+    </div>
+    
+    <!-- During an Earthquake Card -->
+    <div class="card">
+      <h2>During an Earthquake: Take Immediate Action</h2>
+      <ul>
+        <li><strong>Drop, Cover, and Hold On:</strong>
+          <ul>
+            <li>Drop to the ground immediately.</li>
+            <li>Take cover under sturdy furniture, or if none is available, protect your head and neck with your arms.</li>
+            <li>Hold on until the shaking stops. Do not attempt to move until the tremors cease.</li>
+          </ul>
+        </li>
+        <li><strong>Stay Clear of Hazards:</strong> Avoid windows, glass, elevators, and heavy objects that could fall or cause injury.</li>
+      </ul>
+    </div>
+    
+    <!-- After an Earthquake Card -->
+    <div class="card">
+      <h2>After an Earthquake: Stay Safe</h2>
+      <ul>
+        <li><strong>Check for Injuries:</strong> Assess yourself and others for injuries. Provide first aid as needed.</li>
+        <li><strong>Evacuate Safely:</strong> If you are in a damaged building, evacuate carefully. Be mindful of structural damage, broken glass, and debris.</li>
+        <li><strong>Prepare for Aftershocks:</strong> Aftershocks are common. Stay alert and avoid returning to buildings until they are declared safe.</li>
+      </ul>
+    </div>
+  </section>
+</div>
+
+
+
+<footer>
+  <div class="logo">
+    <a href="https://kzahtri.github.io/Kaisyah/kaz.html">
+      <img src="images/logo.png" alt="Earthquake Icon">
+    </a>    
+      <p>Earthquake & Tsunami Educational Hub</p>
+  </div>
+  <nav>
+      <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+      </ul>
+  </nav>
+  <div class="copyright">
+      &copy; 2025 Earthquake & Tsunami Educational Hub. All rights reserved.
+  </div>
+</footer>
+
+  <!-- Scripts -->
+  <script src="scripts00.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+  <!-- JavaScript for Scroll Animation -->
+  <script>
+    const cards = document.querySelectorAll('.card');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    });
+
+    cards.forEach(card => observer.observe(card));
+
+  </script>
+</body>
+</html>

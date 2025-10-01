@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Earthquake & Tsunami Educational Hub</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles02.css">
+</head>
+
+
+
+        <!-- Hero Section -->
+        <header class="hero-section">
+          <div class="hero-overlay"></div>
+          <div class="hero-content">
+            <h1 class="hero-title">
+              Stay Informed, <span class="highlight">Stay Safe</span>
+            </h1>
+            <p class="hero-description">
+              Explore the science behind earthquakes and tsunamis. Prepare, Learn, and Protect.
+            </p>
+            <div class="cta-buttons">
+              <a href="#learn-more" class="cta-button primary">Learn More</a>
+              <a href="GeoQuiz.html" class="cta-button secondary">Take a Quiz</a>
+            </div>
+          </div>
+          <div class="scroll-indicator">
+            <span>Scroll Down</span>
+            <div class="arrow"></div>
+          </div>
+        </header>
+        
+          
+
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        Geo<br>
+        <span class="highlight">Hub.</span>
+      </div>    
+      <div class="nav-links">
+        <a href="capstone02.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="https://huggingface.co/spaces/kzahtri/Geo-Hub" target="_blank" rel="noopener noreferrer">Geo-Bot</a>
+        <a href="https://kzahtri.itch.io/geoquiz" target="_blank" rel="noopener noreferrer">Geo-Quiz</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+    <script>
+      const hamburger = document.querySelector('.hamburger');
+      const navLinks = document.querySelector('.nav-links');
+  
+      hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+      });
+    </script>
+<!-- Main Section -->
+<main id="learn-more">
+    <div class="cards">
+      <section id="earthquake" class="card">
+        <img src="images/icon01.png" alt="Earth's layers">
+        <h2>Earthquake</h2>
+        <p>Discover the causes, impacts, and safety measures of earthquakes through engaging, easy-to-understand insights.</p>
+        <button onclick="window.location.href='earthquake.html'" class="btn btn-primary">See More</button>
+      </section>
+  
+      <section id="live-data" class="card">
+        <img src="images/icon02.png" alt="Live data">
+        <h2>Live Data</h2>
+        <p>Access real-time earthquake & tsunami data to stay updated about global seismic activity.</p>
+        <button onclick="window.location.href='geodata.html'" class="btn btn-primary">See More</button>
+      </section>
+  
+      <section id="tsunami" class="card">
+        <img src="images/icon03.png" alt="Tsunami wave">
+        <h2>Tsunami</h2>
+        <p>Explore the science behind tsunamis, their devastating effects, and essential preparedness tips.</p>
+        <button onclick="window.location.href='tsunami.html'" class="btn btn-primary">See More</button>
+      </section>
+    </div>
+  </main>
+  
+
+
+
+<footer>
+    <div class="logo">
+      <a href="https://kzahtri.github.io/Kaisyah/kaz.html">
+        <img src="images/logo.png" alt="Earthquake Icon">
+      </a>  
+        <p>Earthquake & Tsunami Educational Hub</p>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="terms.html">Privacy Policy</a></li>
+        </ul>
+    </nav>
+    <div class="copyright">
+        &copy; 2025 Earthquake & Tsunami Educational Hub. All rights reserved.
+    </div>
+</footer>
+
+  <!-- Scripts -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <script src="scripts02.js"></script>
+</body>
+</html>

@@ -1,0 +1,828 @@
+/* ===========================
+   General Styles
+=========================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #0f0442;
+  color: #11004d;
+}
+ /* Navbar container */
+ .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #00468B; /* Deep professional color */
+  padding: 1em 2em;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Logo */
+.navbar .logo {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  line-height: 1; /* Tighter line spacing */
+  text-align: center; /* Center the text */
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar .logo .highlight {
+  font-weight: 700; /* Bold for emphasis */
+  color: #467be5; /* Accent color */
+}
+
+/* Logo */
+.navbar .logo {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  line-height: 1.1; /* Tighter spacing */
+  text-align: left; /* Align left for consistent alignment */
+  display: inline-block; /* Ensure it's treated as a block of text */
+  transition: color 0.3s ease-in-out;
+}
+
+/* Apply consistent widths for alignment */
+.navbar .logo .text {
+  display: block; /* Forces each word to stack vertically */
+  width: fit-content; /* Ensures proper alignment */
+  margin: 0 auto; /* Center-aligns the text block */
+}
+
+.navbar .logo .highlight {
+  font-weight: 700; /* Bold for emphasis */
+  color: #9fddff; /* Accent color */
+}
+
+
+/* Hover Effect for Entire Logo */
+.navbar .logo:hover {
+  color: #4f46e5; /* Change color of "Educational" */
+}
+
+.navbar .logo .highlight:hover {
+  color: #3958f5; /* Slightly change color of "Hub" on hover */
+}
+
+
+.navbar .logo:hover {
+  color: #ffffff; /* Subtle hover effect */
+}
+
+/* Navigation links */
+.navbar .nav-links {
+  display: flex;
+  gap: 1.5em;
+}
+
+.navbar .nav-links a {
+  text-decoration: none;
+  color: #f1f5f9;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5em 1em;
+  border-radius: 6px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar .nav-links a:hover {
+  background-color: #46ade5;
+  color: #ffffff;
+}
+
+/* Hamburger menu */
+.navbar .hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 1.5em;
+  cursor: pointer;
+}
+
+.navbar .hamburger span {
+  background-color: white;
+  height: 3px;
+  width: 28px;
+  border-radius: 2px;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+/* Hamburger animation effect */
+.navbar .hamburger:hover span {
+  background-color: #46ade5;
+}
+
+/* Mobile-first design */
+@media screen and (max-width: 768px) {
+  .navbar .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #1e293b;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    padding: 1em 0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-top: 1px solid #334155;
+    transform: translateY(-10%);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .navbar .nav-links.active {
+    display: flex;
+    transform: translateY(0%);
+    opacity: 1;
+  }
+
+  .navbar .nav-links a {
+    padding: 1em;
+    font-size: 1.1rem;
+    text-align: center;
+    border-bottom: 1px solid #334155;
+  }
+
+  .navbar .nav-links a:last-child {
+    border-bottom: none;
+  }
+
+  .navbar .hamburger {
+    display: flex;
+  }
+}
+
+/* Tablet-specific styles */
+@media screen and (max-width: 1024px) {
+  .navbar {
+    padding: 1em 1.5em;
+  }
+
+  .navbar .nav-links a {
+    font-size: 0.95rem;
+  }
+
+  .navbar .logo {
+    font-size: 1.6rem;
+  }
+}
+
+/* Subtle sticky effect when scrolling */
+body.scrolled .navbar {
+  background-color: #0f172a;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ===========================
+   Responsive Design
+=========================== */
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .logo {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  nav ul li a {
+    font-size: 1.2rem; /* Slightly larger for touch-friendly interaction */
+    padding: 0.5rem 1rem;
+    display: block; /* Ensures the clickable area spans the entire link */
+    text-align: center;
+  }
+}
+
+/* ===========================
+   Hero Section with Parallax
+=========================== */
+.hero-parallax {
+  position: relative;
+  height: 110vh;
+  background: url('images/earthquake.png') center/cover no-repeat;
+  background-attachment: fixed; /* Parallax effect */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+.parallax-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(2, 22, 111, 0.4); /* Add semi-transparent overlay for text readability */
+  z-index: 1;
+}
+
+.hero-parallax-content {
+  position: relative;
+  z-index: 2;
+  background: rgba(44, 161, 239, 0.8);
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 90%;
+  text-align: center;
+}
+
+.hero-parallax-content h2 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.hero-parallax-content p {
+  font-size: 0.7rem;
+  line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+  .hero-parallax-content {
+    max-width: 60%;
+  }
+
+  .hero-parallax-content h2 {
+    font-size: 3rem;
+  }
+
+  .hero-parallax-content p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-parallax {
+  background-attachment: fixed; /* Switch to regular scrolling on mobile */
+  height: auto; /* Adjust height based on content */
+  min-height: 100vh; /* Optional: Ensure it covers the viewport initially */
+  }
+
+  .hero-parallax-content {
+    padding: 1.5rem;
+    margin: 2rem auto; /* Add spacing around content */
+  }
+
+  .hero-parallax-content h2 {
+    font-size: 2rem;
+  }
+
+  .hero-parallax-content p {
+    font-size: 1rem;
+  }
+}
+
+
+/* ===========================
+   Parallax Science Section
+=========================== */
+.earthquake-science-parallax {
+  position: relative;
+  height: 120vh;
+  color: white;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+  background: url('images/tectonic3.png') center/cover no-repeat;
+  background-attachment: fixed; /* Parallax effect */
+}
+
+.parallax-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Add overlay for readability */
+  z-index: 1;
+}
+
+.earthquake-science-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 2rem;
+  background: rgba(0, 36, 75, 0.85);
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Typography */
+.earthquake-science-content h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.earthquake-science-content p {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+  line-height: 1.6;
+}
+
+.earthquake-science-content ul {
+  margin: 1.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.earthquake-science-content ul li {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+}
+
+.earthquake-science-content ul li strong {
+  color: #f8af61; /* Highlighted key terms */
+}
+/* Mobile-Specific Optimizations */
+@media (max-width: 768px) {
+  .earthquake-science-parallax {
+    background-attachment: scroll; /* Disable parallax for smoother mobile scrolling */
+    height: auto; /* Allow section height to adjust */
+    padding: 1.5rem 0;
+  }
+
+  .earthquake-science-content {
+    max-width: 90%;
+    padding: 1.5rem;
+    margin: 0 auto;
+  }
+
+  .earthquake-science-content h2 {
+    font-size: 2rem;
+  }
+
+  .earthquake-science-content p {
+    font-size: 1rem;
+  }
+
+  .earthquake-science-content ul li {
+    font-size: 0.95rem;
+  }
+}
+
+/* Very Small Screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .earthquake-science-content {
+    padding: 1rem;
+  }
+
+  .earthquake-science-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .earthquake-science-content p,
+  .earthquake-science-content ul li {
+    font-size: 0.9rem;
+  }
+}
+
+
+/* Earthquake Parallax Section */
+.earthquake-parallax {
+  position: relative;
+  height: 100vh; /* Adjust as needed */
+  background: url('images/magnitude2.png') no-repeat center center fixed;
+  background-size: cover;
+  color: rgb(5, 13, 124);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  padding: 40px 20px;
+}
+.earthquake-magnitude p,
+.earthquake-intensity p {
+  text-align: left; /* Aligns text to the left */
+  margin: 0; /* Removes default margin */
+  padding: 0; /* Removes default padding */
+}
+.earthquake-parallax ul {
+  text-align: left; /* Aligns the list to the left */
+  list-style-position: inside; /* Ensures the list markers are aligned with the text */
+  padding-left: 20px; /* Adds indentation to the list */
+}
+
+.earthquake-parallax li {
+  font-size: 1rem;
+  margin-bottom: 10px; /* Adds spacing between the list items */
+}
+
+/* Apply a slimmer width to the parallax content */
+#earthquake-science .parallax-content {
+  max-width: 700px !important; /* Ensures the width stays slim */
+  margin: 40px auto !important;
+}
+
+/* Earthquake Parallax Section */
+.earthquake-parallax {
+  position: relative;
+  height: 100vh;
+  background: url('images/earthquake-bg.jpg') center/cover no-repeat fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.parallax-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(253, 253, 255, 0.6); /* Dark overlay for readability */
+  z-index: 1;
+}
+
+.earthquake-parallax-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  width: 100%;
+  background-color: #07459c;/* Light background with transparency */
+  padding: 30px 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(1, 1, 86, 0.3);
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.earthquake-parallax h2 {
+  font-size: 2.5rem;
+  color: #00468B;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.7);
+}
+
+.earthquake-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.earthquake-magnitude,
+.earthquake-intensity {
+  flex: 1;
+  min-width: 280px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.earthquake-magnitude h3,
+.earthquake-intensity h3 {
+  font-size: 1.8rem;
+  color: #00468B;
+  margin-bottom: 15px;
+}
+
+.earthquake-magnitude ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.earthquake-magnitude li {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.earthquake-intensity p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .earthquake-parallax {
+    background-attachment: scroll; /* Disable fixed attachment for smoother mobile scrolling */
+    height: auto;
+  }
+
+  .earthquake-parallax-content {
+    padding: 20px;
+    margin: 10px;
+    text-align: left;
+  }
+
+  .earthquake-info {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .earthquake-magnitude,
+  .earthquake-intensity {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .earthquake-parallax h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+
+  .earthquake-parallax-content {
+    padding: 15px;
+  }
+
+  .earthquake-magnitude h3,
+  .earthquake-intensity h3 {
+    font-size: 1.6rem;
+  }
+
+  .earthquake-magnitude ul li,
+  .earthquake-intensity p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Section Styling */
+.earthquake-preparedness-section {
+  position: relative;
+  padding: 5rem 2rem;
+  background-color: #1972bb;
+}
+
+
+.earthquake-preparedness-section h2 {
+  font-size: 2.5rem;
+  color: #00468B;
+  margin-bottom: 1rem;
+}
+
+.earthquake-preparedness-section p {
+  font-size: 1.1rem;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+/* Card Container */
+.card-container {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  padding: 2rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: 040144;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(28, 1, 110, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Card Styling */
+.card {
+  width: 300px;
+  height: 400px;
+  background: linear-gradient(145deg, #007bff, #0056b3);
+  color: white;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.card h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+  padding-bottom: 0.5rem;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow-y: auto;
+}
+
+.card ul li {
+  margin: 0.75rem 0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.card ul li strong {
+  font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .card-container {
+    padding: 1.5rem;
+  }
+
+  .card {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+    overflow-x: unset;
+    justify-content: center;
+  }
+
+  .card {
+    width: 90%;
+    margin-bottom: 1.5rem;
+  }
+
+  .card h2 {
+    font-size: 1.4rem;
+  }
+
+  .card ul li {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-container {
+    padding: 1rem;
+  }
+
+  .card {
+    width: 100%;
+    margin-bottom: 1.2rem;
+  }
+
+  .card h2 {
+    font-size: 1.2rem;
+  }
+
+  .card ul li {
+    font-size: 0.95rem;
+  }
+}
+
+/* Parallax Background */
+.earthquake-preparedness-section {
+  background-image: url('images/earthquake-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+@media (max-width: 768px) {
+  .earthquake-preparedness-section {
+    background-attachment: scroll; /* Disable parallax for mobile */
+  }
+}
+
+
+
+
+
+/* ===========================
+   Footer
+=========================== */
+footer {
+  background-color: #00468B; /* Dark background for a professional, sleek look */
+  color: #f8f9fa; /* Light text for contrast */
+  padding: 3rem 0; /* More space for a more spacious feel */
+  text-align: center; /* Center the footer content */
+}
+
+footer .logo a {
+  display: inline-block; /* Ensures the anchor tag behaves like an inline element */
+  transition: transform 0.3s ease; /* Adds a smooth transform effect when hovered */
+}
+
+footer .logo a:hover {
+  transform: scale(1.1); /* Slightly enlarges the logo on hover */
+}
+
+footer .logo img {
+  max-width: 120px; /* Adjust size if needed */
+  margin-bottom: 1rem; /* Space between the logo and text */
+}
+
+
+footer nav ul {
+  list-style: none; /* Remove default list bullets */
+  padding: 0; /* Remove default padding */
+  margin: 1rem 0; /* Adds spacing between logo and links */
+  display: flex; /* Use Flexbox for horizontal alignment */
+  justify-content: center; /* Centers the list items horizontally */
+  gap: 20px; /* Space between the items */
+}
+
+footer nav ul li {
+  padding: 0 15px; /* Adds padding for balance between items */
+}
+
+footer nav ul li a {
+  text-decoration: none; /* Remove underline from links */
+  color: #f8f9fa; /* Light text color for links */
+  font-size: 1rem; /* Standard link size */
+  font-weight: 500; /* Slightly bolder links for a clean, professional look */
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+}
+
+footer nav ul li a:hover {
+  color: #007bff; /* Highlight the link with a blue color on hover */
+  transform: translateY(-2px); /* Subtle lift on hover */
+}
+
+footer .copyright {
+  font-size: 0.875rem; /* Smaller font for copyright text */
+  color: #adb5bd; /* Light gray for less emphasis */
+  margin-top: 2rem; /* Adds space above copyright text */
+  font-weight: 300; /* Lighter weight for a sleek appearance */
+}
+
+@media (max-width: 768px) {
+  footer nav ul {
+      flex-direction: column; /* Stack the nav items vertically on smaller screens */
+      gap: 10px; /* Reduce space between items */
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-parallax h2 {
+    font-size: 2.5rem;
+  }
+  .hero-parallax p {
+    font-size: 1rem;
+  }
+  #earthquake-science h2 {
+    font-size: 2rem;
+  }
+  .parallax-content {
+    padding: 20px;
+  }
+  .card {
+    width: 100%;
+  }
+}
